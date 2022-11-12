@@ -1,3 +1,4 @@
+# !/usr/bin/env python3
 import sys
 
 
@@ -20,7 +21,7 @@ def add(list_stud):
     return list_stud
 
 
-def list_p(list_stud):
+def list_p():
     line = '+-{}-+-{}-+-{}-+-{}-+'.format(
         '-' * 4,
         '-' * 30,
@@ -51,7 +52,7 @@ def list_p(list_stud):
     print(line)
 
 
-def select(command_d, list_stud):
+def select():
     # Инициализировать счётчик
     count = 0
     # Проверить студентов хотя бы на одну оценку.
@@ -89,9 +90,9 @@ if __name__ == '__main__':
         elif command == 'add':
             students = add(students)
         elif command == 'list':
-            list_p(students)
+            list_p()
         elif command == 'select':
-            select(command, students)
+            select()
         elif command == 'help':
             help_d()
         else:
